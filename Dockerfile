@@ -15,4 +15,4 @@ RUN npm install bson
 
 ADD js data
 
-ENTRYPOINT      ["node", "mongodb.js"]
+ENTRYPOINT      ["node", "data/mongodb.js"]
