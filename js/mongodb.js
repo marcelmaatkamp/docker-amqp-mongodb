@@ -1,6 +1,6 @@
-var amqp = require('amqp')
+var amqp = require('./amqp')
 
-var MongoClient = require('mongodb').MongoClient
+var MongoClient = require('./mongodb').MongoClient
   , assert = require('assert');
 var mongodb_url = process.env.MONGODB_URL || 'mongodb://localhost:27017/myproject';
 
