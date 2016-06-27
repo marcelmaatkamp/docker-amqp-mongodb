@@ -1,7 +1,7 @@
-FROM node
+FROM node:4
 MAINTAINER m.maatkamp@gmail.com version: 0.1
 
-RUN npm install mongodb amqp node-gyp bson
-ADD js data
+RUN npm install mongodb amqp-ts 
+ADD js/mongodb.js .
 
-ENTRYPOINT      ["node", "data/mongodb.js"]
+CMD ["node", "./mongodb.js"]
