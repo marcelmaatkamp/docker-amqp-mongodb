@@ -19,6 +19,7 @@ var mongodb = MongoClient.connect(mongodb_url, function(err, db) {
     console.log("Message received: " + message.getContent());
     collection.insert(message.getContent(), function(err, result) {
       assert.equal(null, err);
+      message.ack();
     });
   });
 
